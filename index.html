@@ -74,7 +74,6 @@
         color: white;
       }
 
-
       /* Column container */
       .row {
         display: -ms-flexbox; /* IE10 */
@@ -85,7 +84,6 @@
         margin: 0 auto;
       }
 
-     
       .profile {
         display: flex;
       }
@@ -110,10 +108,9 @@
         transform: scale(1.1);
         box-shadow: 5px 5px 35px 5px #000000;
       }
-      section{
+      section {
         width: 100%;
       }
-
 
       /* Footer */
       .footer {
@@ -134,8 +131,7 @@
         margin: 1rem;
       }
 
-    
-      p{
+      p {
         margin: 1rem 0;
         font-size: 1.2rem;
       }
@@ -149,6 +145,9 @@
         align-items: center;
         padding: 1rem;
       }
+      h2 {
+        text-align: center;
+      }
 
       .tour-logo {
         width: 600px;
@@ -159,23 +158,24 @@
       .tour-logo img {
         width: 100%;
       }
-      h2 {
-        text-align: center;
-      }
+
       .logo {
         width: 200px;
         display: block;
         margin: 0 auto;
       }
-
+      .video{
+        max-width: 900px;
+        display: block;
+        margin: 0 auto;
+      }
       .logo img {
         width: 100%;
       }
 
       /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
       @media screen and (max-width: 900px) {
-
-        p{
+        p {
           margin: 0 2rem;
         }
         .row {
@@ -183,21 +183,47 @@
         }
 
         .about-me {
-        margin-top: 1rem;
-      }
+          margin-top: 1rem;
+        }
 
         .profile {
           flex-direction: column;
           align-items: center;
         }
-
       }
 
       /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-      @media screen and (max-width: 400px) {
+      @media screen and (max-width: 500px) {
         .navbar a {
           float: none;
           width: 100%;
+        }
+
+        p {
+          font-size: 1rem;
+          word-wrap: break-word;
+        }
+        .tour-logo {
+          width: 350px;
+          display: block;
+          margin: 0 auto;
+        }
+
+        .tour-logo img {
+          width: 100%;
+        }
+
+        img:hover {
+          transform: scale(1);
+          box-shadow: none;
+        }
+        .activities img {
+          width: 90%;
+        }
+
+        .social-icons {
+          display: flex;
+          justify-content: center;
         }
       }
     </style>
@@ -229,9 +255,8 @@
             Мене звати Назар, я молодий і амбітний власник Play, це мій перший
             власний проект, до якого я доклав всі свої сили, а також були
             потрачені великі кошти, але це все заради моїх клієнтів, ми хочемо,
-            щоб вони були задоволені нашими турами, і розказували про нас іншим
+            щоб вони були задоволені нашими турами, і розказували про нас іншим.
           </p>
-
           <p class="social-icons">
             <a
               href="https://instagram.com/nazichok_nazya?igshid=13g2ybl6ky5o7"
@@ -293,6 +318,11 @@
         <div class="tour-logo">
           <img src="img/Назік.png" />
         </div>
+        <video class="video" controls="controls" >
+          <source src="img/video.webm" type='video/webm; codecs="vp8, vorbis"'>
+          <a href="img/video.webm">Скачайте видео</a>.
+         </video>
+        
       </section>
     </main>
 
