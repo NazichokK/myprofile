@@ -4,12 +4,22 @@
     <title>PLAY.UA</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+
     <style>
       * {
         box-sizing: border-box;
       }
 
       /* Style the body */
+      html {
+        scroll-behavior: smooth;
+      }
       body {
         font-family: Arial, Helvetica, sans-serif;
         margin: 0;
@@ -64,50 +74,123 @@
         color: white;
       }
 
+
       /* Column container */
       .row {
         display: -ms-flexbox; /* IE10 */
         display: flex;
         -ms-flex-wrap: wrap; /* IE10 */
         flex-wrap: wrap;
+        max-width: 1024px;
+        margin: 0 auto;
       }
 
-      /* Create two unequal columns that sits next to each other */
-      /* Sidebar/left column */
-      .side {
-        -ms-flex: 30%; /* IE10 */
-        flex: 30%;
-        background-color: #f1f1f1;
-        padding: 20px;
+     
+      .profile {
+        display: flex;
       }
 
-      /* Main column */
-      .main {
-        -ms-flex: 70%; /* IE10 */
-        flex: 70%;
-        background-color: white;
-        padding: 20px;
+      .img-profile {
+        width: 400px;
+      }
+      .right-side {
+        margin-left: 20px;
       }
 
-      /* Fake image, just for this example */
-      .fakeimg {
-        background-color: #aaa;
+      .img-profile img {
         width: 100%;
-        padding: 20px;
       }
+
+      img {
+        transition: 0.3s;
+        border-radius: 10px;
+      }
+
+      img:hover {
+        transform: scale(1.1);
+        box-shadow: 5px 5px 35px 5px #000000;
+      }
+      section{
+        width: 100%;
+      }
+
 
       /* Footer */
       .footer {
+        margin-top: 20px;
         padding: 20px;
         text-align: center;
-        background: #ddd;
+        background: #1abc9c;
+      }
+      .fab {
+        font-size: 2.3rem;
+        transition: 0.2s;
+      }
+      .fab:hover {
+        transform: translateY(-2px) scale(1.5);
+      }
+
+      .social-icons i {
+        margin: 1rem;
+      }
+
+    
+      p{
+        margin: 1rem 0;
+        font-size: 1.2rem;
+      }
+      .about-me {
+        margin-top: 0;
+      }
+
+      .activities {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+      }
+
+      .tour-logo {
+        width: 600px;
+        display: block;
+        margin: 0 auto;
+      }
+
+      .tour-logo img {
+        width: 100%;
+      }
+      h2 {
+        text-align: center;
+      }
+      .logo {
+        width: 200px;
+        display: block;
+        margin: 0 auto;
+      }
+
+      .logo img {
+        width: 100%;
       }
 
       /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-      @media screen and (max-width: 700px) {
+      @media screen and (max-width: 900px) {
+
+        p{
+          margin: 0 2rem;
+        }
         .row {
           flex-direction: column;
         }
+
+        .about-me {
+        margin-top: 1rem;
+      }
+
+        .profile {
+          flex-direction: column;
+          align-items: center;
+        }
+
       }
 
       /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
@@ -120,49 +203,67 @@
     </style>
   </head>
   <body>
-    <header>
-      <div class="header">
-        <h1>PLAY.UA</h1>
-        <p>Ми працюємо, щоб <b> клієнти</b> отримували задоволення!</p>
-      </div>
+    <div class="navbar">
+      <a href="#" class="active">Головна</a>
+      <a href="#busTour">Автобусні тури</a>
+      <a href="#aviaTour">Авіа тури</a>
+      <a href="#aboutMe">Про мене</a>
+      <a href="#aboutUs">Про нас</a>
+      <a href="#" class="right">Вийти</a>
+    </div>
 
-      <div class="navbar">
-        <a href="#" class="active">Головна</a>
-        <a href="#">Автобусні тури</a>
-        <a href="#">Авіа тури</a>
-        <a href="#" class="right">Вийти</a>
-      </div>
+    <header class="header">
+      <h1>PLAY.UA</h1>
+      <p>Ми працюємо, щоб <b> клієнти</b> отримували задоволення!</p>
     </header>
-
+    <h2 class="heading">Про мене</h2>
     <main class="row">
-      <div class="side">
-        <h2>Про мене</h2>
-        <h5>Фото:</h5>
-        <img src="img/photo_2020-02-19_08-26-30.jpg" width="60%" height="50%" />
-        <p>
-          Мене звати Назар, я молодий і амбітний власник Play, це мій перший
-          власний проект, до якого я доклав всі свої сили, а також були
-          потрачені великі кошти, але це все заради моїх клієнтів, ми хочемо,
-          щоб вони були задоволені нашими турами, і розказували про нас іншим
-        </p>
-        <h3>
-          <p>
-            <a href="https://instagram.com/nazichok_nazya?igshid=13g2ybl6ky5o7"
-              >МИ В ІНСТАГРАМ!</a
-            >
+      <section class="profile">
+        <div class="left-side">
+          <div class="img-profile">
+            <img src="img/photo_2020-02-19_08-26-30.jpg" />
+          </div>
+        </div>
+        <div class="right-side">
+          <p class="about-me" id="aboutMe">
+            Мене звати Назар, я молодий і амбітний власник Play, це мій перший
+            власний проект, до якого я доклав всі свої сили, а також були
+            потрачені великі кошти, але це все заради моїх клієнтів, ми хочемо,
+            щоб вони були задоволені нашими турами, і розказували про нас іншим
           </p>
-        </h3>
-        <div class="img" scr="000.png" style="height: 40px"></div>
-        <br />
-        <img src="img/9.png" height:60px; />
-        <img src="img/8.png" height:60px; />
-        <img src="img/7.png" height:60px; />
-        <img src="img/6.png" height:50px; />
-      </div>
-      <div class="main">
+
+          <p class="social-icons">
+            <a
+              href="https://instagram.com/nazichok_nazya?igshid=13g2ybl6ky5o7"
+              target="_blank"
+            >
+              <i class="fab fa-instagram"></i
+            ></a>
+            <a
+              href="https://www.facebook.com/profile.php?id=100008817120010"
+              target="_blank"
+            >
+              <i class="fab fa-facebook-f"></i
+            ></a>
+          </p>
+
+          <div class="activities">
+            <img scr="img/000.png" />
+            <img src="img/9.png" />
+            <img src="img/8.png" />
+            <img src="img/7.png" />
+            <img src="img/6.png" />
+          </div>
+        </div>
+      </section>
+
+      <section id="aboutUs">
         <h2>ПРО НАС</h2>
-        <h5>Ми відкрились 11 березня, 2018 року</h5>
-        <img src="img/рр.jpg" />
+
+        <h2>Ми відкрились 11 березня, 2018 року</h2>
+        <div class="logo">
+          <img src="img/pf_logo.png" />
+        </div>
         <p>
           Прайс агрегатор нашої туристичної компанії легкий спосіб вибрати тур
         </p>
@@ -172,19 +273,27 @@
           або круїз; забронювати авіаквитки. Ви можете самостійно здійснити
           онлайн пошук туру серед пропозицій найбільших туроператорів
         </p>
-        <br />
-        <h2>
-          Туроператор №1 в Україні
-          <img src="img/pf_logo.png" width="20%" height="20%" />
-        </h2>
-        <h5></h5>
+      </section>
 
-        <p>Ми поважаємо наших туристів</p>
+      <section id="aviaTour">
+        <h2>Туроператор №1 в Україні</h2>
+
+        <div class="tour-logo">
+          <img src="img/tsvetnojturahentsyia1.png" />
+        </div>
+      </section>
+
+      <section id="busTour">
+        <h2>Ми поважаємо наших туристів</h2>
         <p>
           Багато людей люблять подорожувати , але не знають куди поїхати –
           Jorden допоможе їм при виборі відпочинку .
         </p>
-      </div>
+
+        <div class="tour-logo">
+          <img src="img/Назік.png" />
+        </div>
+      </section>
     </main>
 
     <footer class="footer">
