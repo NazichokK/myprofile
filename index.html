@@ -164,13 +164,17 @@
         display: block;
         margin: 0 auto;
       }
-      .video{
+      .video {
         max-width: 900px;
         display: block;
         margin: 20px auto;
       }
       .logo img {
         width: 100%;
+      }
+      .audio {
+        display: block;
+        margin: 20px auto;
       }
 
       /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
@@ -235,6 +239,7 @@
       <a href="#aviaTour">Авіа тури</a>
       <a href="#aboutMe">Про мене</a>
       <a href="#aboutUs">Про нас</a>
+
       <a href="#" class="right">Вийти</a>
     </div>
 
@@ -298,6 +303,8 @@
           або круїз; забронювати авіаквитки. Ви можете самостійно здійснити
           онлайн пошук туру серед пропозицій найбільших туроператорів
         </p>
+
+        <audio class="audio" autoplay controls src="img/musik.mp3"></audio>
       </section>
 
       <section id="aviaTour">
@@ -318,11 +325,13 @@
         <div class="tour-logo">
           <img src="img/Назік.png" />
         </div>
-        <video class="video" controls="controls" >
-          <source src="img/video.webm" type='video/webm; codecs="vp8, vorbis"'>
+        <video class="video" controls="controls">
+          <source
+            src="img/video.webm"
+            type='video/webm; codecs="vp8, vorbis"'
+          />
           <a href="img/video.webm">Скачайте видео</a>.
-         </video>
-        
+        </video>
       </section>
     </main>
 
